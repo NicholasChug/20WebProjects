@@ -65,7 +65,7 @@ h1 {
 }
 
 .btn:focus {
-    outine: 0;
+    outline: 0;
 }
 
 @media(max-width: 800px) {
