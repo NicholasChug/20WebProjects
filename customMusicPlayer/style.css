@@ -33,7 +33,7 @@ body {
 
 .img-container::after {
     content: '';
-    background-color: tomato;
+    background-color: #fff;
     border-radius: 50%;
     position: absolute;
     bottom: 100%;
