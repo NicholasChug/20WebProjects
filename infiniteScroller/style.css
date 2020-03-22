@@ -41,7 +41,7 @@ h1 {
     padding: 20px;
     margin: 40px 0;
     display: flex;
-    width: 80vw;
+    flex-direction: column;
     max-width: 800px;
 }
 
