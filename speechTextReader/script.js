@@ -75,3 +75,7 @@ function createBox(item){
     // TODO speak event
 }
 
+// Toggle textbox 
+toggleButton.addEventListener('click', () => {
+    document.getElementById('text-box').classList.toggle('show');
+})
