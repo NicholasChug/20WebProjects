@@ -75,7 +75,34 @@ function createBox(item){
     // TODO speak event
 }
 
+// Store voices
+let voices = [];
+
+// Get voices
+function getVoices() {
+    voices = speechSynthesis.getVoices();
+
+    voices.forEach(voice => {
+        const option = document.createElement('option');
+        option.value = voice.name;
+        option.innerText = `${voice.name} ${voice.lang}`;
+
+        voicesSelect.appendChild(option);
+    });
+}
+
+// Voice has changed
+speechSynthesis.addEventListener('voiceschanged', getVoices);
+
 // Toggle textbox 
 toggleButton.addEventListener('click', () => {
     document.getElementById('text-box').classList.toggle('show');
 })
+
+// close button
+closeButton.addEventListener('click', () => {
+    document.getElementById('text-box').classList.remove('show');
+})
+
+
+getVoices();
